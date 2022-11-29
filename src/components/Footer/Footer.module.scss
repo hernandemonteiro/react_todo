@@ -1,0 +1,7 @@
+@import "../../base.scss";
+
+.footer {
+  @include baseHeaderFooter;
+  @include withOutSelect;
+  font-weight: bold;
+}

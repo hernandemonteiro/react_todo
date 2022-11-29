@@ -1,0 +1,6 @@
+@import "../../base.scss";
+
+.header {
+  @include baseHeaderFooter;
+  @include withOutSelect;
+}

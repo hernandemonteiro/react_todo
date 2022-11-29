@@ -1,0 +1,59 @@
+@import "../../base.scss";
+
+@mixin colorAndBackground {
+  background-color: $blueTextColor;
+  color: $darkBackground;
+}
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  label {
+    @include withOutSelect;
+    margin: 3% 0% -3%;
+    font-size: 1.1rem;
+    color: $darkBackground;
+    text-transform: uppercase;
+    font-weight: bold
+  }
+  h2 {
+    @include withOutSelect;
+    @include colorAndBackground;
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 2%;
+  }
+  input,
+  h2 {
+    border-radius: 7px;
+  }
+  input {
+    padding: 2%;
+    margin: 3% 0%;
+    outline: none;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    appearance: textfield;
+  }
+  input[type="submit"] {
+    @include colorAndBackground;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    &:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+    .form {
+        width: 90%;
+    }
+}

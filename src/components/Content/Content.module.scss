@@ -1,0 +1,8 @@
+@import "../../base.scss";
+
+.mainContent {
+    @include flexFullCenter;
+    flex-direction: column;
+    width: 100%;
+    min-height: 80vh;
+}
